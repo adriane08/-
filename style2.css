@@ -137,8 +137,7 @@ td, th {
 h2{
     font-size: 30px;
 	font-weight: bold;
-	
-	padding: 50px
+	margin-left: 300px;
 }
 
 h1{
@@ -152,6 +151,3 @@ h1{
 	
 }
 
-.cabecalho-imagem{
-	max-width: 35%;
-}
