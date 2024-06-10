@@ -149,5 +149,9 @@ h1{
 
 .cabecalho-imagem{
 	width: 24%;
-	margin-left:100px;
+	
+}
+
+.cabecalho-imagem{
+	max-width: 35%;
 }
