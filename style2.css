@@ -116,7 +116,8 @@ td, th {
 h3{
     font-size: 30px;
 	font-weight: bold;
-	text-align: center;
+	font-style: oblique;
+	text-align: left;
 }
 
  .titulo-principal{
@@ -133,6 +134,6 @@ h3{
 }
 
 .frango {
-	
+	margin-left: 450px;
 }
 
