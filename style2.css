@@ -7,8 +7,8 @@ body{
     background:  #349474;}
 .caixa {
 	position: relative;
-	width: 940px;
-	margin: 0 auto;
+	/*width: 940px;
+	margin: 0 auto;*/
 }
 
 nav {
