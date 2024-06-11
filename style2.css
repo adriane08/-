@@ -49,23 +49,23 @@ nav a:hover {
 	margin: 0 1.5%;
 	padding: 30px 20px;
 	box-sizing: border-box;
-	border: 3px solid #000000;
+	border: 3px solid #ececec;
 	border-radius: 10px;
 }
 
 .produtos li:hover {
-	border-color: #C78C19;
+	border-color: #2ce32f;
 }
 
 .produtos li:active {
-	border-color: #088C19;	
+	border-color: #50cfc4;	
 }
 
 .produtos li:hover h4 {
 	font-size: 34px;
 }
 
-.produtos h3 {
+.produtos h4 {
 	font-size: 30px;
 	font-weight: bold;
 }
@@ -75,11 +75,11 @@ nav a:hover {
 
 
 main {
-	width: 940px;
+	/*width: 940px;*/
 	margin: 0 auto;
 }
 
-form {
+/*form {
 	margin: 40px 0;
 }
 
@@ -87,14 +87,14 @@ form label, form legend {
 	display:block;
 	font-size: 20px;
 	margin: 0 0 10px;
-}
+}*/
 
-.input-padrao {
+/*.input-padrao {
 	display: block;
 	margin: 0 0 20px;
 	padding: 10px 25px;
 	width: 50%;
-}
+}*/
 
 table {
 	margin: 20px 0 40px;
