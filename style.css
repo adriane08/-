@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --cor-principal: #ffffff;
+    --cor-secundaria: #acff26d5;
+    --cor-terciaria: #9dff00;
+    --cor-destaque: #49e7f8d0;
+}
+.content {
+    text-align: center;
+    padding-top: 20vh; /* Empurra o conteúdo para baixo */
+    position: relative; /* Para garantir que o conteúdo fique sobre os confetes */
+    z-index: 1; /* Garante que o texto fique acima dos confetes */
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.2em;
+}
+
+/* Estilos para cada confete individual */
+.confetti {
+    position: absolute; /* Permite posicionar os confetes livremente */
+    width: 7px; /* Tamanho padrão um pouco menor */
+    height: 7px; /* Tamanho padrão um pouco menor */
+    background-color: #ffcc00; /* Cor padrão do confete (amarelo) */
+    border-radius: 50%; /* Faz o confete redondo */
+    opacity: 0; /* Começa invisível */
+    animation: fall 5s linear forwards; /* Aplica a animação de queda */
+    will-change: transform, opacity; /* Otimização de performance para animações */
+    filter: drop-shadow(0 0 1px rgba(0,0,0,0.05)); /* Uma sombra sutil */
+}
+
+/* MUITAS VARIAÇÕES PARA OS CONFETES */
+/* Isso ajuda a criar um efeito mais orgânico e menos repetitivo */
+
+/* Variação 1: Rosa, tamanhos diferentes, atrasos variados */
+.confetti:nth-child(2n) {
+    background-color: #ff6699; /* Rosa */
+    width: 9px;
+    height: 9px;
+    animation-delay: 0.5s;
+    animation-duration: 4.8s;
+}
+
+/* Variação 2: Azul, formas levemente diferentes */
+.confetti:nth-child(3n) {
+    background-color: #66ccff; /* Azul */
+    width: 6px;
+    height: 6px;
+    border-radius: 20%; /* Quadrado */
+    animation-delay: 1.2s;
+    animation-duration: 5.5s;
+}
+
+/* Variação 3: Verde, rotação inicial e mais rápida */
+.confetti:nth-child(4n) {
+    background-color: #99ff66; /* Verde */
+    width: 8px;
+    height: 8px;
+    animation-delay: 0.8s;
+    animation-duration: 4.2s;
+    transform: rotate(45deg); /* Começa um pouco rotacionado */
+}
+
+/* Variação 4: Roxo, mais lento */
+.confetti:nth-child(5n) {
+    background-color: #cc66ff; /* Roxo */
+    width: 10px;
+    height: 10px;
+    animation-delay: 1.8s;
+    animation-duration: 6s;
+}
+
+/* Variação 5: Laranja, menor e com mais atraso */
+.confetti:nth-child(6n) {
+    background-color: #ff9900; /* Laranja */
+    width: 5px;
+    height: 5px;
+    animation-delay: 2.5s;
+    animation-duration: 3.8s;
+}
+
+/* Variação 6: Ciano, rotação diferente */
+.confetti:nth-child(7n) {
+    background-color: #00ffff; /* Ciano */
+    width: 8px;
+    height: 8px;
+    border-radius: 30%; /* Levemente arredondado */
+    animation-delay: 0.3s;
+    animation-duration: 5.2s;
+}
+
+/* Variação 7: Magenta, mais espesso */
+.confetti:nth-child(8n) {
+    background-color: #ff00ff; /* Magenta */
+    width: 11px;
+    height: 11px;
+    animation-delay: 1s;
+    animation-duration: 4.7s;
+}
+
+/* Variação 8: Ouro, mais demorado */
+.confetti:nth-child(9n) {
+    background-color: #daa520; /* Goldenrod */
+    width: 7px;
+    height: 7px;
+    animation-delay: 2.2s;
+    animation-duration: 6.5s;
+}
+
+/* Variação 9: Índigo, rápido */
+.confetti:nth-child(10n) {
+    background-color: #4b0082; /* Indigo */
+    width: 6px;
+    height: 6px;
+    animation-delay: 0.7s;
+    animation-duration: 3.5s;
+}
+
+/* Variação 10: Prata, formato de estrela (simulado) */
+.confetti:nth-child(11n) {
+    background-color: #c0c0c0; /* Silver */
+    width: 9px;
+    height: 9px;
+    border-radius: 0; /* Remove borda redonda */
+    transform: rotate(15deg); /* Simula um formato diferente */
+    animation-delay: 1.5s;
+    animation-duration: 4.9s;
+}
+
+/* Variação 11: Amarelo-esverdeado */
+.confetti:nth-child(12n) {
+    background-color: #adff2f; /* GreenYellow */
+    width: 8px;
+    height: 8px;
+    animation-delay: 0.9s;
+    animation-duration: 5.1s;
+}
+
+/* Variação 12: Azul-celeste */
+.confetti:nth-child(13n) {
+    background-color: #87ceeb; /* SkyBlue */
+    width: 7px;
+    height: 7px;
+    animation-delay: 1.3s;
+    animation-duration: 4.6s;
+}
+
+/* Variação 13: Vermelho-coral */
+.confetti:nth-child(14n) {
+    background-color: #ff7f50; /* Coral */
+    width: 10px;
+    height: 10px;
+    animation-delay: 0.6s;
+    animation-duration: 5.8s;
+}
+
+
+/* Definição da animação 'fall' */
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg); /* Começa 50px acima do topo da tela, sem rotação */
+        opacity: 0; /* Totalmente invisível */
+    }
+    10% {
+        opacity: 1; /* Torna-se visível rapidamente no início da queda */
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg); /* Cai até 100% da altura da viewport, girando duas vezes */
+        opacity: 0; /* Desaparece ao sair da tela */
+    }
+}
+.modal-toggle {
+    display: none;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1050;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-toggle:checked + .modal {
+    display: flex;
+}
+
+.modal-dialog {
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+
+.modal-header {
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+
+.btn-close {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0.25rem;
+}
+
+
+.btn-close::before {
+    content: "×";
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+
+.modal-body {
+    padding: 1rem;
+}
+
+
+.modal-footer {
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+    text-align: right;
+}
+
+
+.modal-toggle:checked + .modal ~ .modal {
+    display: none;
+}
+
+div.modal-content {
+    background-color: #14143a;
+}
+
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    color: var(--cor-principal);
+    background-color: #14143a;
+}
+
+
+h2,
+h5 {
+    color: var(--cor-secundaria);
+    font-weight: 700;
+}
+
+
+.lead,
+.btn-link {
+    color: var(--cor-destaque);
+    font-weight: 700;
+}
+
+.lead {
+    color: var(--cor-principal);
+    font-weight: 700;
+}
+
+a,
+.btn-link:hover {
+    color: var(--cor-secundaria)
+}
+
+a:hover {
+    color: var(--cor-destaque);
+}
+
+h1 {
+    color: var(--cor-terciaria);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+header {
+    background-image: url('img/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-block-start: 1.25rem;
+    padding: 1.5rem;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-reference {
+    margin: 0.75rem 1rem;
+    font-style: italic;
+}
